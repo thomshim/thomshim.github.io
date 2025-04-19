@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Thomas Shimer</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+  <title>Courses</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .semester, .course {
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .course-list, .summary {
+      margin-left: 20px;
+    }
+
+    .course:hover, .semester:hover {
+      color: darkblue;
+    }
+  </style>
 </head>
 <body>
-    <h1>Courses</h1>
-    <p>Will be a list of all the courses I've taken with summaries and descriptions.</p>
+
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="about.html">About</a>
+    <a href="summer2025.html">Internship</a>
+  </nav>
+  <hr />
+
+  <h1>Courses by Semester</h1>
+
+  <!-- Example Semester -->
+  <div class="semester" onclick="toggleVisibility('fall2023')">▶ Fall 2023</div>
+  <div id="fall2023" class="course-list hidden">
+    <div class="course" onclick="toggleVisibility('os-summary')">• Operating Systems</div>
+    <div id="os-summary" class="summary hidden">
+      Topics: Processes, Threads, Scheduling, Synchronization, Virtual Memory, File Systems
+    </div>
+
+    <div class="course" onclick="toggleVisibility('pl-summary')">• Programming Languages</div>
+    <div id="pl-summary" class="summary hidden">
+      Topics: Lexing/Parsing, Functional vs. Imperative, Scoping, Type Systems, RDP Grammar
+    </div>
+  </div>
+
+  <!-- Another Semester -->
+  <div class="semester" onclick="toggleVisibility('spring2024')">▶ Spring 2024</div>
+  <div id="spring2024" class="course-list hidden">
+    <div class="course" onclick="toggleVisibility('gpu-summary')">• GPU Programming</div>
+    <div id="gpu-summary" class="summary hidden">
+      Topics: CUDA, Parallelism, Thread Hierarchy, Memory Coalescing, Speedups
+    </div>
+  </div>
+
+  <script>
+    function toggleVisibility(id) {
+      const elem = document.getElementById(id);
+      elem.classList.toggle("hidden");
+    }
+  </script>
+
 </body>
 </html>
