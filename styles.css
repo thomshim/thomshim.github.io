@@ -1,6 +1,24 @@
 body {
-    background: linear-gradient(135deg, #ff00aa, #eeff00);
-    color: #f6ff00;
-    justify-content: center;
-    align-items: center;
-}
+            font-family: sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
