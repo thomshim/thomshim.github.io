@@ -4,34 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thomas Shimer | Portfolio</title>
-  
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-indicator">
+    <div class="scroll-progress" id="scrollProgress"></div>
+  </div>
 
   <div class="container">
-    <!-- LEFT PANEL: animated canvas -->
+    <!-- LEFT PANEL -->
     <div class="left-panel">
       <canvas id="leftCanvas"></canvas>
     </div>
 
-    <!-- RIGHT PANEL: content -->
+    <!-- RIGHT PANEL -->
     <div class="right-panel">
       <header class="hero">
-        <h1 class="fade-in">Thomas Shimer</h1>
-        <p class="fade-in delay-1">Electrical & Computer Engineeering | Software Engineering | Math Minor</p>
-        <p class="fade-in delay-2">LSU Class of 2026</p>
+        <h1>Thomas Shimer</h1>
+        <p>Electrical & Computer Engineering | Software Engineering | Math Minor</p>
+        <p>LSU Class of 2026</p>
       </header>
 
       <main>
-        <!-- About -->
-        <section id="about" class="fade-section">
-          <h1 class="fade-in">Thomas Shimer</h1>
-          <h2>About Me</h2>
-          <p class="fade-in delay-1">BS Electrical Engineering | BS Software Engineering | Math Minor</p>
-          <p class="fade-in delay-2">LSU Class of 2026</p>
+        <!-- Experience -->
+        <section id="experience" class="fade-section">
+          <h2>Experience</h2>
+          <div class="project">
+            <button class="project-btn">Olin Process Controls Engineering Intern</button>
+            <div class="project-content">
+              <p>Summer 2025 · Control Engineering · DeltaV · Automation</p>
+               <ul class="experience-bullets">
+                <li>Built a VBA tool to automate DeltaV FHX alarm configuration</li>
+                <li>Supported MOD5 → DeltaV migration</li>
+                <li>Set up and programmed a DeltaV Lab Environment</li>
+                <li>Developed UPS monitoring</li>
+              </ul>
+              <a href="pages/olin.html" class="btn">Read More About My Summer Internship</a>
+            </div>
+          </div>
         </section>
 
+        <!-- Projects -->
+        <section id="projects" class="fade-section">
+          <h2>Projects</h2>
+
+          <div class="project">
+            <button class="project-btn">LSU Engineering Senior Design</button>
+            <div class="project-content">
+              <p>Benchmarking 3D SLAM for Endoscopic Surgery: Combining Real Surgical Video and Electromagnetic Ground Truth</p>
+              <ul class="experience-bullets">
+                <li>Built a pipeline to benchmark 3D SLAM on surgical video</li>
+                <li>Synchronized endoscope footage with EM tracker ground truth</li>
+                <li>Preprocessed and labeled datasets for SLAM evaluation</li>
+                <li>Implemented metrics to compare SLAM accuracy and drift</li>
+                <li>Documented results and system workflow for research reporting</li>
+              </ul>
+              <a href="pages/ee-seniordesign.html" class="btn">Read More About My Research</a>
+            </div>
+          </div>
+
+          <div class="project">
+            <button class="project-btn">LectureLift</button>
+            <div class="project-content">
+              <p>A Mobile Application to Assist Students in Carpooling to Class</p>
+              <ul class="experience-bullets">
+                <li>Designed the full app UI/UX in Figma</li>
+                <li>Collaborated on frontend features in Flutter</li>
+                <li>Developed layout and navigation components</li>
+              </ul>
+              <a href="pages/lecturelift.html" class="btn">Check Out LectureLift!</a>
+            </div>
+          </div>
+
+          <div class="project">
+            <button class="project-btn">GeauxHack 2025 - Log Off</button>
+            <div class="project-content">
+              <p>An Application to Get People Outside</p>
+              <ul class="experience-bullets">
+                <li>Description in progress</li>
+                <li>React, Bootstrap</li>
+              </ul>
+              <a href="pages/geauxhack.html" class="btn">Check Out My Hackathon Project!</a>
+            </div>
+          </div>
+        </section>
         <!-- Skills -->
         <section id="skills" class="fade-section">
           <h2>Skills</h2>
@@ -44,49 +102,31 @@
             <span class="skill">MATLAB</span>
           </div>
         </section>
-
-        <!-- Experience -->
-        <section id="experience" class="fade-section">
-          <h2>Experience</h2>
-          <div class="project">
-          <button class="project-btn">Olin Process Controls Engineering Intern</button>
-          <div class="project-content">
-            <p>Summer 2025 · Process Controls Engineering · DeltaV · Automation</p>
-            <a href="pages/olin.html" class="btn">Read More About My Summer Intenship</a>
-          </div>
-        </div>
-
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="fade-section">
-          <h2>Projects</h2>
-
-          <div class="project">
-            <button class="project-btn">LSU Engineering Senior Design</button>
-            <div class="project-content">
-              <p>Benchmarking 3D SLAM for Endoscopic Surgery: Combining Real Surgical Video and Electromagnetic Ground Truth</p>
-              <a href="pages/ee-seniordesign.html" class="btn">Read More About My Research</a>
-            </div>
+        <!-- Coursework -->
+        <section id="coursework" class="fade-section">
+          <h2>Relevant EE Coursework</h2>
+          <div class="coursework-list">
+            <span class="course">Computer Organization</span>
+            <span class="course">GPU Programming</span>
+            <span class="course">Circuits</span>
+            <span class="course">Electronics</span>
+            <span class="course">Solid State Devices</span>
+            <span class="course">Power Systems Protection</span>
+            <span class="course">Signals & Systems</span>
+            <span class="course">Control Systems</span>
           </div>
 
-          <div class="project">
-            <button class="project-btn">LectureLift</button>
-            <div class="project-content">
-              <p>A Mobile Application to Assist Students in Carpooling to Class</p>
-              <a href="pages/lecturelift.html" class="btn">Check Out LectureLift!</a>
-            </div>
-          </div>
-          <div class="project">
-            <button class="project-btn">GeauxHack 2025 - Log Off</button>
-            <div class="project-content">
-              <p>An Application to Get People Outside</p>
-              <a href="pages/geauxhack.html" class="btn">Check Out My Hackathon Project!</a>
-            </div>
+          <h2>Relevant CS Coursework</h2>
+          <div class="coursework-list">
+            <span class="course">Operating Systems</span>
+            <span class="course">Artificial Intelligence</span>
+            <span class="course">Advanced Data Structures & Algorithms</span>
+            <span class="course">Software Systems Development</span>
+            <span class="course">Object Oriented Programming</span>
+            <span class="course">Programming Languages</span>
+            <span class="course">Database Structures Management</span>
           </div>
         </section>
-
-        
       </main>
 
       <footer>
@@ -97,12 +137,10 @@
           <p>LinkedIn: <a href="https://linkedin.com/in/thomasshimer" target="_blank">linkedin.com/in/thomasshimer</a></p>
           <p>GitHub: <a href="https://github.com/thomshim" target="_blank">github.com/thomshim</a></p>
         </section>
-        <p>Thomas Shimer</p>
+        <p style="margin-top: 40px; text-align: center;">© 2025 Thomas Shimer</p>
       </footer>
     </div>
   </div>
-
-  <script src="script2.js"></script>
   <script src="canvas.js"></script>
 </body>
 </html>
